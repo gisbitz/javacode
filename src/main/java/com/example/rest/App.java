@@ -53,13 +53,15 @@ public class App {
     	// sample URL
         String url = "http://129.157.179.180:3000/fighters/45/";
          String url2 = "/red/gisbitz";
+        
         CloseableHttpResponse response = null;
         
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
             for (int i = 0 ; i <10 ; i++) {
-            
-             HttpGet httpGet = new HttpGet(url+i+url2);
+            String u = url+i+url2;
+             System.out.println(u);
+             HttpGet httpGet = new HttpGet(u);
             response = httpclient.execute(httpGet);
             }
             String content = EntityUtils.toString(response.getEntity());
