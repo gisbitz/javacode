@@ -51,13 +51,17 @@ public class App {
     private static void runGetRequest() {
  
     	// sample URL
-        String url = "http://129.157.179.180:3000/shield/33/45/red/gisbitz";
+        String url = "http://129.157.179.180:3000/fighters/45/";
+         String url2 = "/red/gisbitz";
         CloseableHttpResponse response = null;
- 
+        
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
-            HttpGet httpGet = new HttpGet(url);
+            for (int i = 0 ; i <10 ; i++) {
+            
+             HttpGet httpGet = new HttpGet(url+i+url2);
             response = httpclient.execute(httpGet);
+            }
             String content = EntityUtils.toString(response.getEntity());
             System.out.println("Server response: " + content);
         } catch (IOException e) {
