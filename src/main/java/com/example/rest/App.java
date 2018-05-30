@@ -41,29 +41,32 @@ public class App {
  
         System.out.println("Server started");
         System.out.println("Hello!");
-        runGetRequest();
+        String url = "http://129.157.179.180:3000/fighters/45/";
+        String url2 = "/red/gisbitz";
+     for (int i = 0 ; i <10 ; i++) {
+            String u = url+i+url2;
+        runGetRequest(u);
+     }
         //runDatabaseQuery();
     }
  
     /**
      * Performs a simple GET request and prints the result to the log.
      */
-    private static void runGetRequest() {
+    private static void runGetRequest(String u) {
  
     	// sample URL
-        String url = "http://129.157.179.180:3000/fighters/45/";
-         String url2 = "/red/gisbitz";
+       
         
         CloseableHttpResponse response = null;
         
         try {
             CloseableHttpClient httpclient = HttpClients.createDefault();
-            for (int i = 0 ; i <10 ; i++) {
-            String u = url+i+url2;
+            
              System.out.println(u);
              HttpGet httpGet = new HttpGet(u);
             response = httpclient.execute(httpGet);
-            }
+            
             String content = EntityUtils.toString(response.getEntity());
             System.out.println("Server response: " + content);
         } catch (IOException e) {
