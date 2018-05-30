@@ -40,14 +40,14 @@ public class App {
         app.run(args);
  
         System.out.println("Server started");
-        System.out.println("Hello!");
+        /*System.out.println("Hello!");
         String url = "http://129.157.179.180:3000/fighters/45/";
         String url2 = "/red/gisbitz";
      for (int i = 0 ; i <10 ; i++) {
             String u = url+i+url2;
         runGetRequest(u);
-     }
-        //runDatabaseQuery();
+     }*/
+        runDatabaseQuery();
     }
  
     /**
@@ -86,10 +86,10 @@ public class App {
      * Performs a call to the database.
      */
     private static void runDatabaseQuery() {
-        String host = "myHost";
-        String database = "myDatabase";
-        String user = "myUsername";
-        String password = "myPassword";
+        String host = "129.157.179.180";
+        String database = "deathstar";
+        String user = "Captain";
+        String password = "welcome1";
         DBConnection db = new DBConnection("jdbc:mysql://" 
                 + host + "/" 
                 + database + "?user=" 
