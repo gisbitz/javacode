@@ -1,4 +1,4 @@
-/* Copyright © 2016 Oracle and/or its affiliates. All rights reserved. */
+/* Copyright Â© 2016 Oracle and/or its affiliates. All rights reserved. */
 package com.example.rest;
  
 import java.util.Optional;
@@ -30,6 +30,7 @@ public class App {
      * Start the server.
      */
     public static void main(String[] args) {
+        // My microservice!
         // Set properties
         myProps.setProperty("server.address", host.orElse("localhost"));
         myProps.setProperty("server.port", port.orElse("8080"));
