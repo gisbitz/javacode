@@ -40,7 +40,7 @@ public class App {
         app.run(args);
  
         System.out.println("Server started");
- 
+        System.out.println("Hello!");
         runGetRequest();
         //runDatabaseQuery();
     }
