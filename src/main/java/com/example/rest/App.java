@@ -47,7 +47,8 @@ public class App {
             String u = url+i+url2;
         runGetRequest(u);
      }*/
-        runDatabaseQuery();
+     runGetRequest("http://129.157.179.180:3000/reactorCore/320/650/red/gisbitz");
+        //runDatabaseQuery();
     }
  
     /**
